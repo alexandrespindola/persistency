@@ -1,10 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <h3>{{ store.cou}}</h3>
+  <button>Include</button>
+
+  <router-view />
 </template>
+
+<script lang="ts" setup>
+import  { useExample } from '@/store/useExample'
+const store = useExample()
+
+</script>
 
 <style lang="scss">
 #app {
